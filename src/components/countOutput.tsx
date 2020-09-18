@@ -1,13 +1,11 @@
 import React from "react";
-
-interface ICount {
-  value: number
-}
-
-export default function countOutput(props :{count:number}): JSX.Element {
+import  {useSelector} from 'react-redux'
+export default function countOutput(): JSX.Element {
+ const {count}:any = useSelector<number>(state=>state)
+ console.log(count)
   return (
     <div>
-      <h1>{props.count}</h1>
+      <h1></h1>
     </div>
   );
 }

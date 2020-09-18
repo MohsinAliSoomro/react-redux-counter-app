@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import CountOutput from './countOutput'
 import CountInput from './countInput'
 
 function App() {
-  const [count, setCount] = useState<number>(0);
   return (
     <div className="App">
-      <CountOutput count={count} />
-      <CountInput count={count} setCount={setCount} />
+      <CountOutput  />
+      <CountInput  />
     </div>
   );
 }
