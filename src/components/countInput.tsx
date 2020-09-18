@@ -1,14 +1,22 @@
 import React from "react";
 
-export default function countInput(props: {
-  count: number;
-  setCount: React.MouseEvent<HTMLButtonElement, MouseEvent>;
-}) {
+export default function countInput(props: { count: number; setCount: any }) {
   return (
     <div>
-        <div>{props.count}</div>
-      <button>+</button>
-      <button>-</button>
+      <button
+        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+          props.setCount(props.count + 1)
+        }
+      >
+        +
+      </button>
+      <button
+        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+          props.setCount(props.count - 1)
+        }
+      >
+        -
+      </button>
     </div>
   );
 }
